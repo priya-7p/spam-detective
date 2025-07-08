@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Spam Classifier</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">ML Spam Classifier</h1>
+            <p class="subtitle">Advanced machine learning model for email spam detection using Natural Language Processing</p>
+        </header>
+
+        <div class="main-grid">
+            <!-- Classification Panel -->
+            <div class="classification-panel">
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📧 Email Classification</h2>
+                    </div>
+                    <div class="card-content">
+                        <label for="email-text" class="input-label">Enter email content for classification</label>
+                        <textarea 
+                            id="email-text" 
+                            placeholder="Paste your email content here..."
+                            class="textarea"
+                        ></textarea>
+                        <button id="classify-btn" class="btn-primary">
+                            <span class="btn-text">🧠 Classify Email</span>
+                            <span class="btn-loading" style="display: none;">⏳ Processing...</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Preprocessing Steps -->
+                <div id="preprocessing-card" class="card" style="display: none;">
+                    <div class="card-header">
+                        <h2 class="card-title">Preprocessing Pipeline</h2>
+                    </div>
+                    <div class="card-content">
+                        <div id="preprocessing-steps"></div>
+                    </div>
+                </div>
+
+                <!-- Classification Result -->
+                <div id="result-card" class="card" style="display: none;">
+                    <div class="card-header">
+                        <h2 class="card-title">Classification Result</h2>
+                    </div>
+                    <div class="card-content">
+                        <div id="result-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Metrics Display -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📈 Model Performance</h2>
+                    </div>
+                    <div class="card-content">
+                        <div class="metrics">
+                            <div class="metric">
+                                <div class="metric-header">
+                                    <span class="metric-name">🎯 Accuracy</span>
+                                    <span class="metric-value">94.2%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 94.2%"></div>
+                                </div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-header">
+                                    <span class="metric-name">👁️ Precision</span>
+                                    <span class="metric-value">92.8%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill precision" style="width: 92.8%"></div>
+                                </div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-header">
+                                    <span class="metric-name">⚡ Recall</span>
+                                    <span class="metric-value">95.1%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill recall" style="width: 95.1%"></div>
+                                </div>
+                            </div>
+                            <div class="metric">
+                                <div class="metric-header">
+                                    <span class="metric-name">📊 F1-Score</span>
+                                    <span class="metric-value">93.9%</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill f1" style="width: 93.9%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="model-info">
+                            <p>Model trained on 50,000+ emails</p>
+                            <p>Last updated: June 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sample Emails -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📧 Sample Emails</h2>
+                    </div>
+                    <div class="card-content">
+                        <div id="sample-emails" class="sample-emails"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
